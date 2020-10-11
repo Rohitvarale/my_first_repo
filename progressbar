@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <conio.h>
+#include <graphics.h>
+#include <dos.h>
+
+int main()
+{
+	inti,gd=DETECT,gm;
+	initgraph(&gd,&gm,"C:\\TURBOC3\\BGI");
+	
+	settextstyle(DEFAULT_FONT,HORIZ_DIR,2);
+	outtextxy(177,180,"Loading, Please Wait...");
+	
+	for(i=190;i<510;i++)
+	{
+		delay(30);
+		line(i,210,i,230);
+	}
+		
+	closegraph();
+	getch();
+	
+	return 0;
+}
